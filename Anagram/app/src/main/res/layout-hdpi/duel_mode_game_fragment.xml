@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/duelModeGameRl"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/duelModeGameIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/game_screen"/>
+
+    <ImageView
+        android:id="@+id/duelModeGameBackArrowIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_transparent"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:scaleType="centerInside"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/duelModeGameSettingsIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/settings_transparent"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:scaleType="centerInside"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/mode_duel"
+        android:id="@+id/duelModeTv"
+        android:layout_alignTop="@+id/duelModeGameBackArrowIv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:textColor="@android:color/white"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/duelModeGameBackArrowIv">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/duelModeGameBackArrowIv"
+        android:layout_alignRight="@+id/duelModeGameSettingsIv"
+        android:layout_alignEnd="@+id/duelModeGameSettingsIv">
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/questionDefault"
+        android:id="@+id/duelModeGameQuestionTv"
+        android:textColor="@color/textGold"
+        android:gravity="center"
+        android:layout_below="@+id/duelModeTimerIv"
+        android:layout_alignLeft="@+id/duelModeTimerIv"
+        android:layout_alignStart="@+id/duelModeTimerIv"
+        android:layout_alignRight="@+id/duelModeTimerIv"
+        android:layout_alignEnd="@+id/duelModeTimerIv" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/duelModeGameAnswerTv"
+        android:layout_below="@+id/duelModeGameQuestionTv"
+        android:background="@drawable/edit_text"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:alpha="0.7"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="66.6dp"
+        android:layout_height="66.6dp"
+        android:text="1"
+        android:textSize="35sp"
+        android:textColor="@color/cubeItemTextColor"
+        android:id="@+id/duelCubeButton1"
+        android:background="@drawable/game_cube_item_shape"
+        android:layout_below="@+id/duelModeGameAnswerTv"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@+id/duelModeGameAnswerTv"
+        android:layout_alignStart="@+id/duelModeGameAnswerTv"
+        android:tag="0"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="66.6dp"
+        android:layout_height="66.6dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:text="2"
+        android:textSize="35sp"
+        android:id="@+id/duelCubeButton2"
+        android:background="@drawable/game_cube_item_shape"
+        android:layout_alignTop="@+id/duelCubeButton1"
+        android:layout_toRightOf="@+id/duelCubeButton1"
+        android:layout_toEndOf="@+id/duelCubeButton1"
+        android:tag="0"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="66.6dp"
+        android:layout_height="66.6dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:text="3"
+        android:textSize="35sp"
+        android:id="@+id/duelCubeButton3"
+        android:background="@drawable/game_cube_item_shape"
+        android:layout_alignBottom="@+id/duelCubeButton2"
+        android:layout_toRightOf="@+id/duelCubeButton2"
+        android:layout_toEndOf="@+id/duelCubeButton2"
+        android:tag="0"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="66.6dp"
+        android:layout_height="66.6dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:text="4"
+        android:textSize="35sp"
+        android:id="@+id/duelCubeButton4"
+        android:background="@drawable/game_cube_item_shape"
+        android:layout_below="@+id/duelCubeButton1"
+        android:layout_alignLeft="@+id/duelCubeButton1"
+        android:layout_alignStart="@+id/duelCubeButton1"
+        android:tag="0"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="66.6dp"
+        android:layout_height="66.6dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:text="5"
+        android:textSize="35sp"
+        android:id="@+id/duelCubeButton5"
+        android:background="@drawable/game_cube_item_shape"
+        android:layout_alignTop="@+id/duelCubeButton4"
+        android:layout_alignLeft="@+id/duelCubeButton2"
+        android:layout_alignStart="@+id/duelCubeButton2"
+        android:tag="0"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="66.6dp"
+        android:layout_height="66.6dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:text="6"
+        android:textSize="35sp"
+        android:id="@+id/duelCubeButton6"
+        android:background="@drawable/game_cube_item_shape"
+        android:layout_alignTop="@+id/duelCubeButton5"
+        android:layout_toRightOf="@+id/duelCubeButton5"
+        android:layout_toEndOf="@+id/duelCubeButton5"
+        android:tag="0"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="66.6dp"
+        android:layout_height="66.6dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:text="7"
+        android:textSize="35sp"
+        android:id="@+id/duelCubeButton7"
+        android:background="@drawable/game_cube_item_shape"
+        android:layout_below="@+id/duelCubeButton4"
+        android:layout_alignLeft="@+id/duelCubeButton4"
+        android:layout_alignStart="@+id/duelCubeButton4"
+        android:tag="0"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="66.6dp"
+        android:layout_height="66.6dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:text="8"
+        android:textSize="35sp"
+        android:id="@+id/duelCubeButton8"
+        android:background="@drawable/game_cube_item_shape"
+        android:layout_alignTop="@+id/duelCubeButton7"
+        android:layout_alignLeft="@+id/duelCubeButton5"
+        android:layout_alignStart="@+id/duelCubeButton5"
+        android:tag="0"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="66.6dp"
+        android:layout_height="66.6dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:text="9"
+        android:textSize="35sp"
+        android:id="@+id/duelCubeButton9"
+        android:background="@drawable/game_cube_item_shape"
+        android:layout_below="@+id/duelCubeButton5"
+        android:layout_toRightOf="@+id/duelCubeButton5"
+        android:layout_toEndOf="@+id/duelCubeButton5"
+        android:tag="0"/>
+
+    <TextView
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/numbersAndDatesHint"
+        android:id="@+id/duelModeGameHint"
+        android:layout_below="@+id/duelCubeButton7"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="13sp"
+        android:textColor="@color/gameHintColor"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/duelModeTimerIv"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:background="@drawable/duel_timer"
+        android:gravity="center_vertical|center_horizontal" />
+
+
+
+    <LinearLayout
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/duelModeGameHint"
+        android:layout_centerHorizontal="true">
+
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_weight="0.25"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Login "
+                android:gravity="center_vertical|right"
+                android:id="@+id/duelModeGameOwnerLogin"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:layout_alignBottom="@+id/duelModeGameScoreOwner"
+                android:layout_toLeftOf="@+id/duelModeGameScoreOwner"
+                android:layout_alignTop="@+id/duelModeGameScoreOwner" />
+
+            <TextView
+                android:layout_weight="0.75"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:background="@drawable/default_duel_score_color"
+                android:padding="5dp"
+                android:text="00"
+                android:textColor="@android:color/white"
+                android:id="@+id/duelModeGameScoreOwner"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_weight="0.25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=" Login "
+                android:gravity="center_vertical|left"
+                android:id="@+id/duelModeGameGuestLogin"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:layout_alignBottom="@+id/duelModeGameScoreGuest"
+                android:layout_toRightOf="@+id/duelModeGameScoreGuest"
+                android:layout_toEndOf="@+id/duelModeGameScoreGuest"
+                android:layout_alignTop="@+id/duelModeGameScoreGuest" />
+
+            <TextView
+                android:layout_weight="0.75"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:background="@drawable/default_duel_score_color"
+                android:padding="5dp"
+                android:text="00"
+                android:textColor="@android:color/white"
+                android:id="@+id/duelModeGameScoreGuest"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="false" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

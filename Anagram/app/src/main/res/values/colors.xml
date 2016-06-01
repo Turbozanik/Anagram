@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="regButtonColor">#f4d732</color>
+    <color name="editTextColor">#c7c8c9</color>
+    <color name="twitterButtonColor">#61acf2</color>
+    <color name="facebookButtonColor">#465991</color>
+    <color name="facebookSignInButtonColor">#51659c</color>
+    <color name="playButtonColor">#9194c7</color>
+    <color name="textGold">#f2d633</color>
+    <color name="stokeCubeItemColor">#b3cae7</color>
+    <color name="gameHintColor">#d1d1d1</color>
+    <color name="cubeItemTextColor">#a3a5d1</color>
+    <color name="settingsBarColor">#9193c9</color>
+    <color name="darkGray">#333333</color>
+    <color name="duel_loosing_person_color">#ab3f4c</color>
+    <color name="duel_winning_person_color">#9bd13d</color>
+    <color name="wrong_answer_game_button_color">#cc6664</color>
+    <color name="right_answer_game_button_color">#f2d633</color>
+
+</resources>

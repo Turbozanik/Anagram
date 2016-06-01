@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/preNumberGameBackgroundIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pre_game_background"/>
+
+    <ImageView
+        android:id="@+id/preNumberGameBackArrowIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_transparent"
+        android:paddingTop="22dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="22dp"
+        android:paddingRight="22dp"
+        android:scaleType="centerInside"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/preNumberGameSettingsIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/settings_transparent"
+        android:paddingTop="22dp"
+        android:paddingLeft="22dp"
+        android:paddingBottom="22dp"
+        android:paddingRight="10dp"
+        android:scaleType="centerInside"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/allYouHaveToDo"
+        android:id="@+id/preNumberGameChoseTv"
+        android:textSize="17sp"
+        android:textColor="@android:color/white"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/numbersAndDates"
+        android:id="@+id/preNumberGameNumbersAndDates"
+        android:layout_marginTop="15dp"
+        android:padding="15dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/play_button_shape"
+        android:layout_below="@+id/preNumberGameChoseTv"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"/>
+
+</RelativeLayout>

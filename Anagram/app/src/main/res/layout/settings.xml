@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pre_game_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/settingsBarColor"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:id="@+id/settingsBackArrowIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_transparent"
+            android:paddingTop="22dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="22dp"
+            android:paddingRight="22dp"
+            android:scaleType="centerInside"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:id="@+id/settingsIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/settings_transparent"
+            android:paddingTop="22dp"
+            android:paddingLeft="22dp"
+            android:paddingBottom="22dp"
+            android:paddingRight="10dp"
+            android:scaleType="centerInside"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/settings"
+            android:id="@+id/settingsBarTv"
+            android:textColor="@color/textGold"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/choseDifficultyRl"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/edit_text"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="17.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/settingsGameLevel"
+            android:src="@drawable/settings_pik1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/choseDifficulty"
+            android:id="@+id/choseDifficultyTv"
+            android:textColor="@color/editTextColor"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/settingsGameLevel"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Basic"
+            android:id="@+id/levelDifficultyTv"
+            android:textColor="@color/cubeItemTextColor"
+            android:layout_alignTop="@+id/settingsGameLevel"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignBaseline="@id/choseDifficultyTv"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/chronometerRl"
+        android:background="@drawable/edit_text"
+        android:layout_below="@+id/choseDifficultyRl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="17.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/settingsChronometerIv"
+            android:src="@drawable/chronometer_settings"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/chronometer"
+            android:id="@+id/settingsChronometerTv"
+            android:textColor="@color/editTextColor"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/settingsChronometerIv"
+            android:layout_marginTop="14.5dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Basic"
+            android:id="@+id/chronometerTimeChoseTv"
+            android:textColor="@color/cubeItemTextColor"
+            android:layout_alignTop="@+id/settingsChronometerTv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/modeRl"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text"
+        android:layout_below="@+id/chronometerRl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="14.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/settingsModeIv"
+            android:src="@drawable/settings_game_mod"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/mode"
+            android:id="@+id/modeTv"
+            android:textColor="@color/editTextColor"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/settingsModeIv"
+            android:layout_marginTop="13.5dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Basic"
+            android:id="@+id/modeChoseTv"
+            android:textColor="@color/cubeItemTextColor"
+            android:layout_alignTop="@+id/modeTv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/inviteFriendRl"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text"
+        android:layout_below="@+id/modeRl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="17.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/settingsInviteIv"
+            android:src="@drawable/invite_settings"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/inviteFriend"
+            android:id="@+id/inviteFriendTv"
+            android:textColor="@color/editTextColor"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/settingsInviteIv"
+            android:layout_marginTop="13.5dp"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/settingsBadgesCountRl"
+        android:layout_width="300dp"
+        android:alpha="0.7"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/inviteFriendRl"
+        android:background="@drawable/edit_text"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="16.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/settingsBadgesIv"
+            android:src="@drawable/badges_settings"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/noBadges"
+            android:id="@+id/settingsBadgesTv"
+            android:textColor="@color/editTextColor"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/settingsBadgesIv"
+            android:layout_marginTop="13.5dp"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

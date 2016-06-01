@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/gameChoiseBackgroundIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/play_background"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/choseOneCategory"
+        android:id="@+id/gameChoiceTv"
+        android:textColor="@android:color/white"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/namesAndWords"
+        android:id="@+id/namesAndWordsButton"
+        android:layout_below="@+id/gameChoiceTv"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/yellow_button"
+        android:padding="15dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/numbersAndDates"
+        android:id="@+id/numberAndDatesButton"
+        android:layout_below="@+id/namesAndWordsButton"
+        android:background="@drawable/play_button_shape"
+        android:layout_centerHorizontal="true"
+        android:padding="15dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"/>
+</RelativeLayout>

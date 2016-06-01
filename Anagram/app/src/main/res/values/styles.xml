@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- Extends the base theme below -->
+    </style>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+
+</resources>

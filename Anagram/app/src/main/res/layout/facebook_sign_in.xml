@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/facebookButtonColor"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="20dp"
+            android:text="@string/signInWithFacebook"
+            android:textColor="@android:color/white"
+            android:id="@+id/facebookSignInTv"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="205dp"
+        android:layout_height="100dp"
+        android:id="@+id/facebookSignInIv"
+        android:src="@drawable/facebook_sing_in_image"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/facebookPermissions"
+        android:id="@+id/facebookPermissionsTv"
+        android:layout_below="@+id/facebookSignInIv"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/editTextColor"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/lockIv"
+        android:src="@drawable/lock"
+        android:layout_below="@+id/facebookPermissionsTv"
+        android:layout_alignLeft="@+id/facebookPermissionsTv"
+        android:layout_alignStart="@+id/facebookPermissionsTv"
+        android:layout_marginTop="52dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/noPublishingApproval"
+        android:id="@+id/approvalText"
+        android:layout_alignRight="@id/facebookPermissionsTv"
+        android:layout_alignBottom="@+id/lockIv"
+        android:layout_toRightOf="@+id/lockIv"
+        android:layout_toEndOf="@+id/lockIv" />
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_alignLeft="@+id/facebookPermissionsTv"
+        android:layout_alignRight="@+id/facebookPermissionsTv"
+        android:id="@+id/socNetworkLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+
+        <Button
+            android:layout_weight="0.90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/facebookCancelButton"
+            android:background="@drawable/facebook_cancel_button_stroked"
+            android:text="@string/Cancel"
+            android:textColor="@color/darkGray"
+            android:padding="10dp"
+            android:layout_marginRight="7dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:layout_weight="1.12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/facebookOkButton"
+            android:text="@string/Ok"
+            android:textColor="@android:color/white"
+            android:padding="10dp"
+            android:background="@drawable/register_facebook_shape"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+</RelativeLayout>

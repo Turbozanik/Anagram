@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/twitter_reg_back">
+
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<ImageView-->
+        <!--android:id="@+id/twitterRegistrationBackgroundIv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:src="@drawable/twitter_reg_back"/>-->
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/twitterNameSurname"
+        android:background="@drawable/edit_text"
+        android:layout_marginTop="230dp"
+        android:hint="@string/registrationEmail"
+        android:width="300dp"
+        android:padding="15dp"
+        android:textColorHint="@color/editTextColor"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"/>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/twitterPassword"
+        android:background="@drawable/edit_text"
+        android:hint="@string/registrationPassword"
+        android:width="300dp"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/editTextColor"
+        android:layout_below="@+id/twitterNameSurname"
+        android:layout_centerInParent="true"
+        android:singleLine="true"/>
+
+    <Button
+        android:layout_alignLeft="@id/twitterPassword"
+        android:layout_alignRight="@id/twitterPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Ok"
+        android:textColor="@color/editTextColor"
+        android:id="@+id/twitterRegWindowButton"
+        android:layout_below="@+id/twitterPassword"
+        android:background="@drawable/edit_text"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:textSize="17sp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_alignLeft="@id/twitterPassword"
+        android:layout_alignRight="@id/twitterPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/editTextColor"
+        android:text="@string/Cancel"
+        android:background="@drawable/edit_text"
+        android:id="@+id/twitterRegCancel"
+        android:layout_below="@+id/twitterRegWindowButton"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:textSize="17sp"
+        android:layout_marginTop="70dp"
+        android:textAllCaps="false"/>
+</RelativeLayout>
+</LinearLayout>

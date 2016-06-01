@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gameRl"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/gameBackgroundIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/game_screen"/>
+
+
+    <ImageView
+        android:id="@+id/gameBackArrowIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_transparent"
+        android:paddingTop="22dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="22dp"
+        android:paddingRight="22dp"
+        android:scaleType="centerInside"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/gameSettingsIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/settings_transparent"
+        android:paddingTop="22dp"
+        android:paddingLeft="22dp"
+        android:paddingBottom="22dp"
+        android:paddingRight="10dp"
+        android:scaleType="centerInside"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/gameBackArrowIv">
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/gameBackArrowIv"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/questionDefault"
+        android:id="@+id/gameQuestionTv"
+        android:textColor="@color/textGold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/gameAnswerTv"
+        android:layout_below="@+id/gameQuestionTv"
+        android:background="@drawable/edit_text"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:alpha="0.7"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="83.3dp"
+        android:layout_height="83.3dp"
+        android:textSize="35sp"
+        android:textColor="@color/cubeItemTextColor"
+        android:id="@+id/cubeButton1"
+        android:layout_below="@+id/gameAnswerTv"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@+id/gameAnswerTv"
+        android:layout_alignStart="@+id/gameAnswerTv"
+        android:tag="0"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="83.3dp"
+        android:layout_height="83.3dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:textSize="35sp"
+        android:id="@+id/cubeButton2"
+        android:layout_alignTop="@+id/cubeButton1"
+        android:layout_toRightOf="@+id/cubeButton1"
+        android:layout_toEndOf="@+id/cubeButton1"
+        android:tag="1"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="83.3dp"
+        android:layout_height="83.3dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:textSize="35sp"
+        android:id="@+id/cubeButton3"
+        android:layout_alignBottom="@+id/cubeButton2"
+        android:layout_toRightOf="@+id/cubeButton2"
+        android:layout_toEndOf="@+id/cubeButton2"
+        android:tag="2"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="83.3dp"
+        android:layout_height="83.3dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:textSize="35sp"
+        android:id="@+id/cubeButton4"
+        android:layout_below="@+id/cubeButton1"
+        android:layout_alignLeft="@+id/cubeButton1"
+        android:layout_alignStart="@+id/cubeButton1"
+        android:tag="3"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="83.3dp"
+        android:layout_height="83.3dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:textSize="35sp"
+        android:id="@+id/cubeButton5"
+        android:layout_alignTop="@+id/cubeButton4"
+        android:layout_alignLeft="@+id/cubeButton2"
+        android:layout_alignStart="@+id/cubeButton2"
+        android:tag="4"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="83.3dp"
+        android:layout_height="83.3dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:textSize="35sp"
+        android:id="@+id/cubeButton6"
+        android:layout_alignTop="@+id/cubeButton5"
+        android:layout_toRightOf="@+id/cubeButton5"
+        android:layout_toEndOf="@+id/cubeButton5"
+        android:tag="5"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="83.3dp"
+        android:layout_height="83.3dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:textSize="35sp"
+        android:id="@+id/cubeButton7"
+        android:layout_below="@+id/cubeButton4"
+        android:layout_alignLeft="@+id/cubeButton4"
+        android:layout_alignStart="@+id/cubeButton4"
+        android:tag="6"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="83.3dp"
+        android:layout_height="83.3dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:textSize="35sp"
+        android:id="@+id/cubeButton8"
+        android:layout_alignTop="@+id/cubeButton7"
+        android:layout_alignLeft="@+id/cubeButton5"
+        android:layout_alignStart="@+id/cubeButton5"
+        android:tag="7"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="83.3dp"
+        android:layout_height="83.3dp"
+        android:textColor="@color/cubeItemTextColor"
+        android:textSize="35sp"
+        android:id="@+id/cubeButton9"
+        android:layout_below="@+id/cubeButton5"
+        android:layout_toRightOf="@+id/cubeButton5"
+        android:layout_toEndOf="@+id/cubeButton5"
+        android:tag="8"/>
+
+    <TextView
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/numbersAndDatesHint"
+        android:id="@+id/gameHint"
+        android:layout_below="@+id/cubeButton7"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="13sp"
+        android:textColor="@color/gameHintColor"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:tag="9"/>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/gameHint"
+        android:layout_alignLeft="@+id/cubeButton7"
+        android:layout_alignStart="@+id/cubeButton7"
+        android:layout_alignRight="@+id/cubeButton9"
+        android:layout_alignEnd="@+id/cubeButton9">
+
+
+        <ImageView
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:src="@drawable/refresh_game_button"
+            android:background="@drawable/refresh_game_button_shape"
+            android:id="@+id/questionRefreshIv" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/typeChangeButton"
+            android:id="@+id/gameTypeChangeButton"
+            android:layout_weight="1.5"
+            android:padding="15dp"
+            android:textSize="13sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rubrique_change_button_shape"
+            android:layout_marginLeft="10dp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

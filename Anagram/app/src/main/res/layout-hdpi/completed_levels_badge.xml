@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/completedLevelsBadgeRl">
+
+    <ImageView
+        android:id="@+id/completedLevelsBackgroundIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/completed_levels_background"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/scenarioCompleteBadgeIv"
+        android:src="@drawable/book_basic"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/basicLevelComplete"
+        android:id="@+id/scenarioCompleteTv"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/scenarioCompleteBadgeIv"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/sendYourResults"
+        android:id="@+id/sendYourResultTv"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/scenarioCompleteTv"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true" />
+
+
+    <LinearLayout
+        android:id="@+id/sendDatalv"
+        android:layout_alignLeft="@+id/scenarioCompleteTv"
+        android:layout_alignRight="@+id/scenarioCompleteTv"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/sendYourResultTv"
+        android:layout_centerHorizontal="true">
+
+
+        <ImageView
+            android:layout_weight="0.9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sendDataTwitterIv"
+            android:src="@drawable/twitter_button"
+            android:background="@drawable/register_twitter_shape"
+            android:layout_marginRight="7dp"/>
+
+        <ImageView
+            android:layout_weight="0.9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sendDataFacebookIv"
+            android:src="@drawable/facebook_button"
+            android:background="@drawable/register_facebook_shape"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sendDatalv"
+        android:text="@string/continuePlaying"
+        android:id="@+id/continuePlayingButton"
+        android:background="@drawable/play_button_shape"
+        android:textColor="@android:color/white"
+        android:padding="15dp"
+        android:layout_marginTop="40dp"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

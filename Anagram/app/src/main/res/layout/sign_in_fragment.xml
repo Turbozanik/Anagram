@@ -1,0 +1,122 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center|center_vertical|center_horizontal">
+
+    <ImageView
+        android:id="@+id/questionSplashBackgroundIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pre_game_background"/>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/signInEmailEt"
+        android:hint="@string/registrationEmail"
+        android:background="@drawable/edit_text"
+        android:padding="15dp"
+        android:textColorHint="@color/editTextColor"
+        android:textColor="@color/editTextColor"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"/>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/signInPasswordEt"
+        android:hint="@string/registrationPassword"
+        android:background="@drawable/edit_text"
+        android:padding="15dp"
+        android:textColorHint="@color/editTextColor"
+        android:textColor="@color/editTextColor"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/signInEmailEt"
+        android:singleLine="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/signIn"
+        android:id="@+id/signInViewTv"
+        android:textColor="@android:color/white"
+        android:layout_above="@+id/signInEmailEt"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/signIn"
+        android:id="@+id/signInButton"
+        android:layout_below="@+id/signInPasswordEt"
+        android:background="@drawable/yellow_button"
+        android:padding="15dp"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:layout_marginBottom="30dp"/>
+
+    <LinearLayout
+        android:id="@+id/socSignInLayout"
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/signInButton"
+        android:layout_centerHorizontal="true">
+
+
+        <ImageView
+            android:layout_weight="0.9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/twitterSignInIv"
+            android:src="@drawable/twitter_new_button"
+            android:background="@drawable/register_twitter_shape"
+            android:layout_marginRight="7dp"/>
+
+        <ImageView
+            android:layout_weight="0.9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/facebookSignInIv"
+            android:src="@drawable/facebook_new_image"
+            android:background="@drawable/register_facebook_shape" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/socSignInLayout"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/signInToRegister"
+            android:id="@+id/signInToRegistrationTv"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/register"
+            android:id="@+id/signInRegisterTv"
+            android:textColor="@color/playButtonColor" />
+    </LinearLayout>
+
+
+</RelativeLayout>

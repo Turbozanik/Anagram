@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/completedDuelRl">
+
+    <ImageView
+        android:id="@+id/completedDuelBackgroundIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/duel_lose"/>
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/duelLostText"
+        android:id="@+id/duelCompleteTv"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_alignLeft="@+id/continueDuelButton"
+        android:layout_alignStart="@+id/continueDuelButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/sendYourResults"
+        android:id="@+id/sendYourResultDuelTv"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/duelCompleteTv"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true" />
+
+
+    <LinearLayout
+        android:id="@+id/sendDuelDatalv"
+        android:layout_alignLeft="@+id/duelCompleteTv"
+        android:layout_alignRight="@+id/duelCompleteTv"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/sendYourResultDuelTv"
+        android:layout_centerHorizontal="true">
+
+
+        <ImageView
+            android:layout_weight="0.9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sendResultTwitterIv"
+            android:src="@drawable/twitter_button"
+            android:background="@drawable/register_twitter_shape"
+            android:layout_marginRight="7dp"/>
+
+        <ImageView
+            android:layout_weight="0.9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sendResultFacebookIv"
+            android:src="@drawable/facebook_button"
+            android:background="@drawable/register_facebook_shape"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sendDuelDatalv"
+        android:text="@string/continuePlaying"
+        android:id="@+id/continueDuelButton"
+        android:background="@drawable/play_button_shape"
+        android:textColor="@android:color/white"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/quitDuelMode"
+        android:id="@+id/quitDuelButton"
+        android:layout_below="@+id/continueDuelButton"
+        android:background="@drawable/rubrique_change_button_shape"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
